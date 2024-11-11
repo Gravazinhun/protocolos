@@ -9,5 +9,6 @@ function showDetails(protocol) {
     let selectedDetail = document.getElementById(protocol);
     if (selectedDetail) {
         selectedDetail.style.display = 'block';
+    
     }
 }
