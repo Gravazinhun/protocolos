@@ -1,1 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolos de Rede</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .protocol-details {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e7e7e7;
+            border-radius: 8px;
+        }
+        .protocol-details p {
+            margin: 5px 0;
+        }
+        .show-details {
+            color: #007bff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
 
+<div class="container">
+    <h1>Protocolos de Rede</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Protocolo</th>
+                <th>Função</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>HTTP</td>
+                <td>Protocolo de transferência de hipertexto</td>
+                <td><span class="show-details" onclick="showDetails('http')">Ver detalhes</span></td>
+            </tr>
+            <tr>
+                <td>FTP</td>
+                <td>Protocolo de transferência de arquivos</td>
+                <td><span class="show-details" onclick="showDetails('ftp')">Ver detalhes</span></td>
+            </tr>
+            <tr>
+                <td>DNS</td>
+                <td>Serviço de nomes de domínio</td>
+                <td><span class="show-details" onclick="showDetails('dns')">Ver detalhes</span></td>
+            </tr>
+            <tr>
+                <td>TCP</td>
+                <td>Protocolo de controle de transmissão</td>
+                <td><span class="show-details" onclick="showDetails('tcp')">Ver detalhes</span></td>
+            </tr>
+            <tr>
+                <td>IP</td>
+                <td>Protocolo de internet (endereço IP)</td>
+                <td><span class="show-details" onclick="showDetails('ip')">Ver detalhes</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="http" class="protocol-details">
+        <h3>HTTP - Hypertext Transfer Protocol</h3>
+        <p>É o protocolo utilizado para a transferência de páginas web e outros recursos na internet.</p>
+        <p>Operação: Cliente faz requisições HTTP e servidor responde com o conteúdo solicitado.</p>
+    </div>
+
+    <div id="ftp" class="protocol-details">
+        <h3>FTP - File Transfer Protocol</h3>
+        <p>Utilizado para transferir arquivos entre computadores na rede.</p>
+        <p>Operação: Permite que arquivos sejam enviados e recebidos de servidores remotos.</p>
+    </div>
+
+    <div id="dns" class="protocol-details">
+        <h3>DNS - Domain Name System</h3>
+        <p>Converte nomes de domínio legíveis (exemplo.com) para endereços IP.</p>
+        <p>Operação: Resolve o nome de domínio para o endereço IP correspondente para facilitar a comunicação entre computadores.</p>
+    </div>
+
+    <div id="tcp" class="protocol-details">
+        <h3>TCP - Transmission Control Protocol</h3>
+        <p>Protocolo de comunicação orientado à conexão, garantindo a entrega dos pacotes de dados.</p>
+        <p>Operação: Divide os dados em pacotes, e garante que a transmissão seja realizada de forma ordenada e sem erros.</p>
+    </div>
+
+    <div id="ip" class="protocol-details">
+        <h3>IP - Internet Protocol</h3>
+        <p>Responsável pelo endereçamento e roteamento de pacotes entre dispositivos na rede.</p>
+        <p>Operação: Cada dispositivo na rede possui um endereço IP único para se comunicar com outros dispositivos.</p>
+    </div>
+</div>
+
+<script>
+    function showDetails(protocol) {
+        // Esconde todos os detalhes
+        let details = document.querySelectorAll('.protocol-details');
+        details.forEach(function(detail) {
+            detail.style.display = 'none';
+        });
+
+        // Exibe os detalhes do protocolo selecionado
+        let selectedDetail = document.getElementById(protocol);
+        if (selectedDetail) {
+            selectedDetail.style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html>
