@@ -52,7 +52,36 @@
                 <td>Protocolo de IP automatico</td>
                 <td><span class="show-details" onclick="showDetails('dhcp')"> Ver detalhes</span></td>
             </tr>
-           
+            <tr>
+                <td>IP (V4, V6)</td>
+                <td>Protocolos que ajudam a localizar e conectar dispositivos na internet</td>
+                <td><span class="show-details" onclick="showDetails('ip (v4,v6)')">Ver detalhes</span></td>
+            </tr>
+            <tr>
+                <td>SMTP</td>
+                <td>Protocolo que envia e-mails</td>
+                <td><span class="show-details" onclick="showDetails('smtp')">Ver detalhes</span></td>
+            </tr>
+            <tr>
+                <td>POP3</td>
+                <td>Este protocolo é como um “transportador” de e-mails</td>
+                <td><span class="show-details" onclick="showDetails('pop3')">Ver detalhes</span></td>
+            </tr>
+            <tr>
+                <td>TelNet</td>
+                <td>É como um telefone para controlar outros computadores de longe</td>
+                <td><span class="show-details" onclick="showDetails('telnet')">Ver detalhes</span></td>
+            </tr>
+            <tr>
+                <td>IMAP</td>
+                <td>Protocolo que permite acessar seus e-mails sem precisar baixá-los</td>
+                <td><span class="show-details" onclick="showDetails('imap')">Ver detalhes</span></td>
+            </tr>
+            <tr>
+                <td>SSH</td>
+                <td>É como o TelNet, mas pode acessar os computadores com uma maior segurança</td>
+                <td><span class="show-details" onclick="showDetails('ssh')">Ver detalhes</span></td>
+            </tr>
         </tbody>
     </table>
     <p>Mais Informações</p>
@@ -64,53 +93,90 @@
 
         </tbody>
     </table>
-
-
-
-
     <div id="http" class="protocol-details">
         <h3>HTTP - Hypertext Transfer Protocol</h3>
         <p>É o protocolo utilizado para a transferência de páginas web e outros recursos na internet.</p>
         <p>Operação: Cliente faz requisições HTTP e servidor responde com o conteúdo solicitado.</p>
         <h3>HTTPS - Hypertext Transfer Protocol Secure</h3>
         <p>Mesma coisa do HTTP porém possui um sistema mais seguro.</p>
+  
     </div>
 
     <div id="ftp" class="protocol-details">
         <h3>FTP - File Transfer Protocol</h3>
         <p>Utilizado para transferir arquivos entre computadores na rede.</p>
         <p>Operação: Permite que arquivos sejam enviados e recebidos de servidores remotos.</p>
+  
     </div>
 
     <div id="dns" class="protocol-details">
         <h3>DNS - Domain Name System</h3>
         <p>Converte nomes de domínio legíveis (exemplo.com) para endereços IP.</p>
         <p>Operação: Resolve o nome de domínio para o endereço IP correspondente para facilitar a comunicação entre computadores.</p>
+
     </div>
 
     <div id="tcp" class="protocol-details">
         <h3>TCP - Transmission Control Protocol</h3>
         <p>Protocolo de comunicação orientado à conexão, garantindo a entrega dos pacotes de dados.</p>
         <p>Operação: Divide os dados em pacotes, e garante que a transmissão seja realizada de forma ordenada e sem erros.</p>
+
     </div>
 
     <div id="ip" class="protocol-details">
         <h3>IP - Internet Protocol</h3>
         <p>Responsável pelo endereçamento e roteamento de pacotes entre dispositivos na rede.</p>
         <p>Operação: Cada dispositivo na rede possui um endereço IP único para se comunicar com outros dispositivos.</p>
+ 
     </div>
+   
     <div id="dhcp" class="protocol-details">
         <h3>DHCP - Dynamic Host Configuration Protocol</h3>
         <p>ele é responsavel por distribuir os ips na rede de forma dinamica e rapida.</p>
 
     </div>
+   
     <div id="pop3" class="protocol-details">
-        
+        <h3> POP3 - Post Office Protocol 3</h3>
+        <p>É utlizado para receber e baixar e-mails de um servidor para um computador ou o dispositivo do usuário.</p>
+        <p>Ele não mantem os e-mails no servidor após o download, então, quando você baixa as mensagens, elas ficam armazenadas no seu computador, liberando espaço no servidor.</p>
+
     </div>
-</div>
+   
+    <div id="smtp" class="protocol-details">
+        <h3>SMTP - Simple Mail Transfer Protocol</h3>
+        <p>O SMTP é como o "carteiro" que pega a sua mensagem de e-mail e a entrega ao destinatário.</p>
 
-</div>
+    </div>
 
+    <div id="ip (v4,v6)" class="protocol-details">
+        <h3>IPv4 - Internet Protocol version 4</h3>
+        <p>É como um endereço de internet composto por 4 números, sendo separados por pontos (exemplo: 192.168.1.1).</p>
+        <h3>IPv6 - Internet Protocol version 6</h3>
+        <p>É uma versão mais atual desses endereços, sendo composto por 8 grupos de 4 caracteres, separados por dois pontos.</p>
+
+    </div>
+ 
+    <div id="telnet" class="protocol-details">
+        <h3>TelNet</h3>
+        <p>Protocolo de rede usado para acessar e gerenciar remotamente um computador ou um servidor, utilizando a internet ou rede local.</p>
+        <p>Ele permite que você entre em outro sistema e o controle como se realmente estivesse nele , utilizando comandos de texto.</p>
+        <p>TelNet não é criptografado, fazendo com que os dados transmitidos (incluindo senhas) possam ser interceptados, fazendo com que o SSH seja mais utilizado atualmente.</p>
+
+    </div>
+    
+    <div id="imap" class="protocol-details">
+        <h3>IMAP - Internet Message Access Protocol</h3>
+        <p>É utilizado para acessar e gerenciar e-mails, mas diferente do POP3, ele baixa as mensagens para o seu dispositivo, permitindo que você gerencie diretamente do servidor.</p>
+ 
+    </div>
+    
+    <div id="ssh" class="protocol-details">
+        <h3>SSH - Secure Shell</h3>
+        <p>Protocolo que permite acessar remotamente os computadores, geralmente para fins de admnistração e manutenção de servidores.</p>
+        <p>Mas diferente do TelNet, ele pode fazer esse acesso de uma forma segura, pois criptografa todos os dados transmitidos, protegendo senhas e comandos de uma só vez.</p>
+
+    </div>
 
 </body>
 </html>
