@@ -140,12 +140,17 @@
         <h3> POP3 - Post Office Protocol 3</h3>
         <p>É utlizado para receber e baixar e-mails de um servidor para um computador ou o dispositivo do usuário.</p>
         <p>Ele não mantem os e-mails no servidor após o download, então, quando você baixa as mensagens, elas ficam armazenadas no seu computador, liberando espaço no servidor.</p>
+        <p>O POP3 não é ideal se você acessa e-mail de dipositivos diferentes, fazendo o IMAP melhor nesse quesito.</p>
+        <p>Um dos lados positivos, é que você pode acessar o e-mail de forma offiline, já que o e-mail foi armazenado de forma local.</p>
 
     </div>
    
     <div id="smtp" class="protocol-details">
         <h3>SMTP - Simple Mail Transfer Protocol</h3>
         <p>O SMTP é como o "carteiro" que pega a sua mensagem de e-mail e a entrega ao destinatário.</p>
+        <p>Se o destinatário usa um provedor diferente, o SMTP transfere o e-mail do servidor de origem para o servidor de destino, onde fica aguardando até ser baixado ou visualisado.</p>
+        <p>É usado exclusivamente para enviar e-mails, para receber e gerenciar são necessários outros protocolos, IMAP e POP3</p>
+        <p>Atualmente, SMTP trabalha com métodos de autenticação e, na maioria das vezes, com criptografia para proteger as mensagens durante o envio.</p>
 
     </div>
 
@@ -171,6 +176,9 @@
     <div id="imap" class="protocol-details">
         <h3>IMAP - Internet Message Access Protocol</h3>
         <p>É utilizado para acessar e gerenciar e-mails, mas diferente do POP3, ele baixa as mensagens para o seu dispositivo, permitindo que você gerencie diretamente do servidor.</p>
+        <p>Como os e-mails permanecem no servidor, qualquer alteração será refletida em todos os dispositivos que você acessa o e-mail.</p>
+        <p>Facilita a consulta e manutenção, pois permite que você organize seus e-mails em pastas diretamente no servidor.</p>
+        <p>Diferente do POP3, o IMAP só baixa o conteúdo do e-mail que você está utilizando, economizando espaço no dispositivo.</p>
  
     </div>
     
@@ -178,6 +186,8 @@
         <h3>SSH - Secure Shell</h3>
         <p>Protocolo que permite acessar remotamente os computadores, geralmente para fins de admnistração e manutenção de servidores.</p>
         <p>Mas diferente do TelNet, ele pode fazer esse acesso de uma forma segura, pois criptografa todos os dados transmitidos, protegendo senhas e comandos de uma só vez.</p>
+        <p>Depois de estar conectado, você pode utilizar o terminal para fazer comandos no sistema remoto, como se estivesse fisicamente presente.</p>
+        <p>Também permite a transferência de arquivos de uma forma segura entre seu dispositivo e o sistema remoto, usando o SCP(Secure Copy Protocol) ou SFTP(SSH File Transfer Protocol).</p>
 
     </div>
 
