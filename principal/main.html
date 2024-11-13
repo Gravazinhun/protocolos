@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protocolos de Rede</title>
+    <title>Redes de Computadores</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     
 </head>
@@ -11,7 +11,7 @@
     <script src="interect.js"></script>
 
 <div class="container">
-    <h1>Alguns Protocolos de Rede</h1>
+    <h1>PROTOCOLOS DE REDES</h1>
 
     <table>
         <thead>
@@ -24,62 +24,62 @@
         <tbody>
             <tr>
                 <td>HTTP(S)</td>
-                <td>Protocolo de transferência de hipertexto</td>
+                <td>Protocolo de transferência de hipertexto.</td>
                 <td><span class="show-details" onclick="showDetails('http')">Ver detalhes</span></td>
             </tr>
             <tr>
                 <td>FTP</td>
-                <td>Protocolo de transferência de arquivos</td>
+                <td>Protocolo de transferência de arquivos.</td>
                 <td><span class="show-details" onclick="showDetails('ftp')">Ver detalhes</span></td>
             </tr>
             <tr>
                 <td>DNS</td>
-                <td>Serviço de nomes de domínio</td>
+                <td>Serviço de nomes de domínio.</td>
                 <td><span class="show-details" onclick="showDetails('dns')">Ver detalhes</span></td>
             </tr>
             <tr>
                 <td>TCP</td>
-                <td>Protocolo de controle de transmissão</td>
+                <td>Protocolo de controle de transmissão.</td>
                 <td><span class="show-details" onclick="showDetails('tcp')">Ver detalhes</span></td>
             </tr>
             <tr>
                 <td>IP</td>
-                <td>Protocolo de internet (endereço IP)</td>
+                <td>Protocolo de internet (endereço IP).</td>
                 <td><span class="show-details" onclick="showDetails('ip')">Ver detalhes</span></td>
             </tr>
             <tr>
                 <td>DHCP</td>
-                <td>Protocolo de IP automatico</td>
+                <td>Protocolo de IP automático.</td>
                 <td><span class="show-details" onclick="showDetails('dhcp')"> Ver detalhes</span></td>
             </tr>
             <tr>
                 <td>IP (V4, V6)</td>
-                <td>Protocolos que ajudam a localizar e conectar dispositivos na internet</td>
+                <td>Protocolos que ajudam a localizar e conectar dispositivos na internet.</td>
                 <td><span class="show-details" onclick="showDetails('ip (v4,v6)')">Ver detalhes</span></td>
             </tr>
             <tr>
                 <td>SMTP</td>
-                <td>Protocolo que envia e-mails</td>
+                <td>Protocolo que envia e-mails.</td>
                 <td><span class="show-details" onclick="showDetails('smtp')">Ver detalhes</span></td>
             </tr>
             <tr>
                 <td>POP3</td>
-                <td>Este protocolo é como um “transportador” de e-mails</td>
+                <td>Este protocolo é como um “transportador” de e-mails.</td>
                 <td><span class="show-details" onclick="showDetails('pop3')">Ver detalhes</span></td>
             </tr>
             <tr>
-                <td>TelNet</td>
-                <td>É como um telefone para controlar outros computadores de longe</td>
+                <td>TELNET</td>
+                <td>É como um telefone para controlar outros computadores de longe.</td>
                 <td><span class="show-details" onclick="showDetails('telnet')">Ver detalhes</span></td>
             </tr>
             <tr>
                 <td>IMAP</td>
-                <td>Protocolo que permite acessar seus e-mails sem precisar baixá-los</td>
+                <td>Protocolo que permite acessar seus e-mails sem precisar baixá-los.</td>
                 <td><span class="show-details" onclick="showDetails('imap')">Ver detalhes</span></td>
             </tr>
             <tr>
                 <td>SSH</td>
-                <td>É como o TelNet, mas pode acessar os computadores com uma maior segurança</td>
+                <td>É como o TelNet, mas pode acessar os computadores com uma maior segurança.</td>
                 <td><span class="show-details" onclick="showDetails('ssh')">Ver detalhes</span></td>
             </tr>
         </tbody>
@@ -94,6 +94,7 @@
         </tbody>
     </table>
     <div id="http" class="protocol-details">
+        <h1>HTTP(S)</h1>
         <h3>HTTP - Hypertext Transfer Protocol</h3>
         <p>É o protocolo utilizado para a transferência de páginas web e outros recursos na internet.</p>
         <p>Operação: Cliente faz requisições HTTP e servidor responde com o conteúdo solicitado.</p>
@@ -103,41 +104,41 @@
     </div>
 
     <div id="ftp" class="protocol-details">
-        <h3>FTP - File Transfer Protocol</h3>
+        <h1>FTP - File Transfer Protocol</h1>
         <p>Utilizado para transferir arquivos entre computadores na rede.</p>
         <p>Operação: Permite que arquivos sejam enviados e recebidos de servidores remotos.</p>
   
     </div>
 
     <div id="dns" class="protocol-details">
-        <h3>DNS - Domain Name System</h3>
+        <h1>DNS - Domain Name System</h1>
         <p>Converte nomes de domínio legíveis (exemplo.com) para endereços IP.</p>
         <p>Operação: Resolve o nome de domínio para o endereço IP correspondente para facilitar a comunicação entre computadores.</p>
 
     </div>
 
     <div id="tcp" class="protocol-details">
-        <h3>TCP - Transmission Control Protocol</h3>
+        <h1>TCP - Transmission Control Protocol</h1>
         <p>Protocolo de comunicação orientado à conexão, garantindo a entrega dos pacotes de dados.</p>
         <p>Operação: Divide os dados em pacotes, e garante que a transmissão seja realizada de forma ordenada e sem erros.</p>
 
     </div>
 
     <div id="ip" class="protocol-details">
-        <h3>IP - Internet Protocol</h3>
+        <h1>IP - Internet Protocol</h1>
         <p>Responsável pelo endereçamento e roteamento de pacotes entre dispositivos na rede.</p>
         <p>Operação: Cada dispositivo na rede possui um endereço IP único para se comunicar com outros dispositivos.</p>
  
     </div>
    
     <div id="dhcp" class="protocol-details">
-        <h3>DHCP - Dynamic Host Configuration Protocol</h3>
-        <p>Ele é responsavel por distribuir os ips na rede de forma dinamica e rapida.</p>
+        <h1>DHCP - Dynamic Host Configuration Protocol</h1>
+        <p>Ele é responsável por distribuir os ips na rede de forma dinâmica e rápida.</p>
 
     </div>
    
     <div id="pop3" class="protocol-details">
-        <h3> POP3 - Post Office Protocol 3</h3>
+        <h1> POP3 - Post Office Protocol 3</h1>
         <p>É utlizado para receber e baixar e-mails de um servidor para um computador ou o dispositivo do usuário.</p>
         <p>Ele não mantem os e-mails no servidor após o download, então, quando você baixa as mensagens, elas ficam armazenadas no seu computador, liberando espaço no servidor.</p>
         <p>O POP3 não é ideal se você acessa e-mail de dipositivos diferentes, fazendo o IMAP melhor nesse quesito.</p>
@@ -146,7 +147,7 @@
     </div>
    
     <div id="smtp" class="protocol-details">
-        <h3>SMTP - Simple Mail Transfer Protocol</h3>
+        <h1>SMTP - Simple Mail Transfer Protocol</h1>
         <p>O SMTP é como o "carteiro" que pega a sua mensagem de e-mail e a entrega ao destinatário.</p>
         <p>Se o destinatário usa um provedor diferente, o SMTP transfere o e-mail do servidor de origem para o servidor de destino, onde fica aguardando até ser baixado ou visualisado.</p>
         <p>É usado exclusivamente para enviar e-mails, para receber e gerenciar são necessários outros protocolos, IMAP e POP3</p>
@@ -155,6 +156,7 @@
     </div>
 
     <div id="ip (v4,v6)" class="protocol-details">
+        <h1>IP(v4, v6)</h1>
         <h3>IPv4 - Internet Protocol version 4</h3>
         <p>É como um endereço de internet composto por 4 números, sendo separados por pontos (exemplo: 192.168.1.1).</p>
         <p>Cada número pode variar de 0 a 255.</p>
@@ -166,7 +168,7 @@
     </div>
  
     <div id="telnet" class="protocol-details">
-        <h3>TelNet</h3>
+        <h1>TELNET</h1>
         <p>Protocolo de rede usado para acessar e gerenciar remotamente um computador ou um servidor, utilizando a internet ou rede local.</p>
         <p>Ele permite que você entre em outro sistema e o controle como se realmente estivesse nele , utilizando comandos de texto.</p>
         <p>TelNet não é criptografado, fazendo com que os dados transmitidos (incluindo senhas) possam ser interceptados, fazendo com que o SSH seja mais utilizado atualmente.</p>
@@ -174,7 +176,7 @@
     </div>
     
     <div id="imap" class="protocol-details">
-        <h3>IMAP - Internet Message Access Protocol</h3>
+        <h1>IMAP - Internet Message Access Protocol</h1>
         <p>É utilizado para acessar e gerenciar e-mails, mas diferente do POP3, ele baixa as mensagens para o seu dispositivo, permitindo que você gerencie diretamente do servidor.</p>
         <p>Como os e-mails permanecem no servidor, qualquer alteração será refletida em todos os dispositivos que você acessa o e-mail.</p>
         <p>Facilita a consulta e manutenção, pois permite que você organize seus e-mails em pastas diretamente no servidor.</p>
@@ -183,7 +185,7 @@
     </div>
     
     <div id="ssh" class="protocol-details">
-        <h3>SSH - Secure Shell</h3>
+        <h1>SSH - Secure Shell</h1>
         <p>Protocolo que permite acessar remotamente os computadores, geralmente para fins de admnistração e manutenção de servidores.</p>
         <p>Mas diferente do TelNet, ele pode fazer esse acesso de uma forma segura, pois criptografa todos os dados transmitidos, protegendo senhas e comandos de uma só vez.</p>
         <p>Depois de estar conectado, você pode utilizar o terminal para fazer comandos no sistema remoto, como se estivesse fisicamente presente.</p>
