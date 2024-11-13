@@ -40,7 +40,8 @@ h2 {
 
 p, ul {
     font-size: 1rem;
-    margin-inline: 0.2cm;
+    margin-inline: 0.5cm;
+    margin: 0.2cm
 }
 
 ul {
