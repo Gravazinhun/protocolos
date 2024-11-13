@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     // Seletor do botão para mostrar o edital completo
     const showEditalBtn = document.getElementById('showEditalBtn');
@@ -9,9 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
         fullEdital.classList.toggle('hidden');
         
         if (fullEdital.classList.contains('hidden')) {
-            showEditalBtn.textContent = "Mostrar Refêrencias";
+            showEditalBtn.textContent = "Mostrar Referências";
         } else {
-            showEditalBtn.textContent = "Ocultar Refêrencias";
+            showEditalBtn.textContent = "Ocultar Referências";
         }
     });
 });
