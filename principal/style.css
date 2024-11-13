@@ -68,3 +68,9 @@ tr:nth-child(even) {
     cursor: pointer;
     font: 1.3em Arial;
 }
+.protocol-details{
+    display:none;
+}
+.protocol-details.visible{
+    display: block;
+}
