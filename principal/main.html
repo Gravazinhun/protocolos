@@ -42,11 +42,7 @@
                 <td>Protocolo de controle de transmissão.</td>
                 <td><span class="show-details" onclick="showDetails('tcp')">Ver detalhes</span></td>
             </tr>
-            <tr>
-                <td>IP</td>
-                <td>Protocolo de internet (endereço IP).</td>
-                <td><span class="show-details" onclick="showDetails('ip')">Ver detalhes</span></td>
-            </tr>
+
             <tr>
                 <td>DHCP</td>
                 <td>Protocolo de IP automático.</td>
@@ -95,40 +91,67 @@
     </table>
     <div id="http" class="protocol-details">
         <h1>HTTP(S)</h1>
-        <h3>HTTP - Hypertext Transfer Protocol</h3>
-        <p>É o protocolo utilizado para a transferência de páginas web e outros recursos na internet.</p>
-        <p>Operação: Cliente faz requisições HTTP e servidor responde com o conteúdo solicitado.</p>
-        <h3>HTTPS - Hypertext Transfer Protocol Secure</h3>
-        <p>Mesma coisa do HTTP porém possui um sistema mais seguro.</p>
+        <h2>HTTP - Hypertext Transfer Protocol</h2>
+        <h3>O que é HTTP?</h3>
+        <p>O HTTP(HyperText Transfer Protocol) é o principal protocolo usado para enviar dados entre
+            um navegador web e um site, tendo também sua versão mais segura o HTTPS(HyperText
+            Transfer Protocol Secure), ele utiliza a porta 443 diferenciado-se de sua outra versão que utiliza
+            a porta 80.</p>
+        <h2>HTTPS - Hypertext Transfer Protocol Secure</h2>
+        <h3>O que é HTTPS?</h3>
+        <p>É como o HTTP, porém, o HTTPS tem um sistema de maior segurança para ser utilizado, com a mensagem sendo transferida sem interceptações.</p>
+        <h3>Como funciona?</h3>
+        <p>Ele usa um protocolo de criptografia para guardar e proteger as comunicações(Transport
+            Layer Security(TLS)), ele usa uma infraestrutura de chave publica assimétrica, normalmente
+            esse sistema usa duas chaves diferentes para criptografar(chave pública: esta chave está
+            disponível para todos que desejam interagir com o servidor de forma segura; chave privada:
+            esta chave é controlada pelo proprietário de um site e é mantida, como o leitor pode imaginar,
+            privada. Essa chave reside em um servidor web e é usada para descriptografar informações
+            criptografadas pela chave pública).
+            O HTTPS é fundamental na proteção de suas informações na web.</p>
   
     </div>
 
     <div id="ftp" class="protocol-details">
         <h1>FTP - File Transfer Protocol</h1>
-        <p>Utilizado para transferir arquivos entre computadores na rede.</p>
-        <p>Operação: Permite que arquivos sejam enviados e recebidos de servidores remotos.</p>
+        <h3>O que é o FTP?</h3>>
+        <p>FTP, ou File Transfer Protocol (Protocolo de Transferência de Arquivos), é um protocolo
+            de rede utilizado para transferir arquivos entre um cliente e um servidor em uma rede de
+            computadores, como a internet. Criado nos anos 70, ele é um dos métodos mais antigos e
+            ainda amplamente usado para movimentar dados de um local para outro, especialmente em
+            ambientes empresariais e de desenvolvimento de websites. Com o FTP, é possível enviar,
+            baixar, renomear, excluir e organizar arquivos em um servidor remoto.</p>
+        <h3>Como funciona?</h3>
+        <p>O funcionamento do FTP se baseia em uma conexão entre dois pontos principais: um
+            cliente (que normalmente é o dispositivo do usuário) e um servidor de arquivos. Para iniciar
+            uma sessão FTP, o cliente se conecta ao servidor usando credenciais de login, como um nome
+            de usuário e senha. Algumas sessões FTP permitem acesso anônimo, onde não são exigidas
+            credenciais, mas isso depende das configurações de segurança do servidor. As transferências em FTP podem ser feitas no modo texto (ASCII) para arquivos de texto ou no
+            modo binário para arquivos executáveis, imagens e outros formatos. O cliente FTP envia uma solicitação
+            de transferência, e o servidor responde, concluindo a ação.</p>
   
     </div>
 
     <div id="dns" class="protocol-details">
         <h1>DNS - Domain Name System</h1>
-        <p>Converte nomes de domínio legíveis (exemplo.com) para endereços IP.</p>
-        <p>Operação: Resolve o nome de domínio para o endereço IP correspondente para facilitar a comunicação entre computadores.</p>
+        <h3>O que é DNS?</h3>
+        <p>DNS(Domain Name System ou Sistema de nome de domínio) ele traduz nomes de sites
+            em endereços de IP, ele é como uma “agenda de contato”.</p>
+        <h3>Como funciona?</h3>
+        <p>Quando um usuário digita um domínio na barra de endereços do navegador, ocorre uma
+            consulta DNS:</p>
+        <p>Consulta ao Cache Local, o sistema verifica se o endereço IP correspondente ao domínio já está
+            armazenado no cache do dispositivo;</p>
+        <p>Servidor DNS Recursivo, Se não estiver no cache, a consulta vai para um servidor DNS recursivo,
+            geralmente configurado pelo provedor de internet;</p>
 
     </div>
-
+    
     <div id="tcp" class="protocol-details">
         <h1>TCP - Transmission Control Protocol</h1>
         <p>Protocolo de comunicação orientado à conexão, garantindo a entrega dos pacotes de dados.</p>
         <p>Operação: Divide os dados em pacotes, e garante que a transmissão seja realizada de forma ordenada e sem erros.</p>
 
-    </div>
-
-    <div id="ip" class="protocol-details">
-        <h1>IP - Internet Protocol</h1>
-        <p>Responsável pelo endereçamento e roteamento de pacotes entre dispositivos na rede.</p>
-        <p>Operação: Cada dispositivo na rede possui um endereço IP único para se comunicar com outros dispositivos.</p>
- 
     </div>
    
     <div id="dhcp" class="protocol-details">
@@ -157,11 +180,11 @@
 
     <div id="ip (v4,v6)" class="protocol-details">
         <h1>IP(v4, v6)</h1>
-        <h3>IPv4 - Internet Protocol version 4</h3>
+        <h2>IPv4 - Internet Protocol version 4</h2>
         <p>É como um endereço de internet composto por 4 números, sendo separados por pontos (exemplo: 192.168.1.1).</p>
         <p>Cada número pode variar de 0 a 255.</p>
         <p>Endereços curtos e limitados, foi amplamente usado, mas está se esgotando.</p>
-        <h3>IPv6 - Internet Protocol version 6</h3>
+        <h2>IPv6 - Internet Protocol version 6</h2>
         <p>É uma versão mais atual desses endereços, sendo composto por 8 grupos de 4 caracteres, separados por dois pontos.</p>
         <p>Possui endereços suficientes para o mundo atual, e com algumas melhorias de segurança e eficiência.</p>
 
