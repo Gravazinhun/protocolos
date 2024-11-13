@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -93,13 +94,8 @@
         <h1>HTTP(S)</h1>
         <h2>HTTP - Hypertext Transfer Protocol</h2>
         <h3>O que é HTTP?</h3>
-        <p>O HTTP(HyperText Transfer Protocol) é o principal protocolo usado para enviar dados entre
-            um navegador web e um site, tendo também sua versão mais segura o HTTPS(HyperText
-            Transfer Protocol Secure), ele utiliza a porta 443 diferenciado-se de sua outra versão que utiliza
-            a porta 80.</p>
-        <h2>HTTPS - Hypertext Transfer Protocol Secure</h2>
-        <h3>O que é HTTPS?</h3>
-        <p>É como o HTTP, porém, o HTTPS tem um sistema de maior segurança para ser utilizado, com a mensagem sendo transferida sem interceptações.</p>
+        <p>O HTTP(HyperText Transfer Protocol) o principal protocolo usado para enviar dados entre um navegador web e um site, tendo também sua versão mais segura o HTTPS(HyperText Transfer Protocol Secure) ele utiliza a porta 443 diferenciado-se de sua outra versão que utiliza a porta 80.</p>
+       
         <h3>Como funciona?</h3>
         <p>Ele usa um protocolo de criptografia para guardar e proteger as comunicações(Transport
             Layer Security(TLS)), ele usa uma infraestrutura de chave publica assimétrica, normalmente
@@ -108,14 +104,15 @@
             esta chave é controlada pelo proprietário de um site e é mantida, como o leitor pode imaginar,
             privada. Essa chave reside em um servidor web e é usada para descriptografar informações
             criptografadas pela chave pública).
-            O HTTPS é fundamental na proteção de suas informações na web.</p>
+                O HTTPS é fundamental na proteção de suas informações na web.</p>
+        <img title="https.jfif">
   
     </div>
 
     <div id="ftp" class="protocol-details">
         <h1>FTP - File Transfer Protocol</h1>
-        <h3>O que é o FTP?</h3>>
-        <p>FTP, ou File Transfer Protocol (Protocolo de Transferência de Arquivos), é um protocolo
+        <h3>O que é o FTP?</h3>
+        <p>FTP ou File Transfer Protocol (Protocolo de Transferência de Arquivos), é um protocolo
             de rede utilizado para transferir arquivos entre um cliente e um servidor em uma rede de
             computadores, como a internet. Criado nos anos 70, ele é um dos métodos mais antigos e
             ainda amplamente usado para movimentar dados de um local para outro, especialmente em
@@ -126,7 +123,9 @@
             cliente (que normalmente é o dispositivo do usuário) e um servidor de arquivos. Para iniciar
             uma sessão FTP, o cliente se conecta ao servidor usando credenciais de login, como um nome
             de usuário e senha. Algumas sessões FTP permitem acesso anônimo, onde não são exigidas
-            credenciais, mas isso depende das configurações de segurança do servidor. As transferências em FTP podem ser feitas no modo texto (ASCII) para arquivos de texto ou no
+            credenciais, mas isso depende das configurações de segurança do servidor. </p>
+        <h3>Exemplo de uso:</h3>
+        <p>As transferências em FTP podem ser feitas no modo texto (ASCII) para arquivos de texto ou no
             modo binário para arquivos executáveis, imagens e outros formatos. O cliente FTP envia uma solicitação
             de transferência, e o servidor responde, concluindo a ação.</p>
   
@@ -144,6 +143,8 @@
             armazenado no cache do dispositivo;</p>
         <p>Servidor DNS Recursivo, Se não estiver no cache, a consulta vai para um servidor DNS recursivo,
             geralmente configurado pelo provedor de internet;</p>
+        <p>Servidores Autoritativos, Caso o servidor recursivo também não tenha o endereço, ele consulta servidores autoritativos, incluindo o servidor raiz, o TLD (Top-Level Domain, como .com, .org), e finalmente o servidor autoritativo do domínio específico.
+                Um exemplo de uso é quando abrimos um site web como o youtube ou twitch.</p>
 
     </div>
     
@@ -156,64 +157,70 @@
    
     <div id="dhcp" class="protocol-details">
         <h1>DHCP - Dynamic Host Configuration Protocol</h1>
-        <p>Ele é responsável por distribuir os ips na rede de forma dinâmica e rápida.</p>
-
+        <p>O DHCP (Dynamic Host Configuration Protocol) é um protocolo de rede que automatiza a atribuição de endereços IP e outras configurações de rede para dispositivos em uma rede, Em vez de configurar manualmente cada dispositivo com um endereço IP.</p>
+        <h3>Como funciona o DHCP?</h3>
+        <p>O DHCP opera por meio de um processo de "oferta e concessão" entre o dispositivo que solicita o IP (chamado cliente DHCP) e o servidor DHCP. Quando um dispositivo se conecta a uma rede, ele envia uma mensagem de "descoberta DHCP" em busca de um servidor DHCP. Ao receber essa mensagem, o servidor DHCP responde com uma "oferta DHCP", contendo um endereço IP disponível e outras configurações de rede. Se o dispositivo aceita, ele responde com uma mensagem de "solicitação DHCP" e, finalmente, o servidor confirma a concessão do IP com uma "confirmação DHCP". </p>
+        <h3>Exemplos de uso:</h3>
+        <p>Em redes domésticas, o roteador age como servidor DHCP, atribuindo automaticamente endereços IP para dispositivos como laptops, smartphones e impressoras. </p>
+    
     </div>
    
     <div id="pop3" class="protocol-details">
         <h1> POP3 - Post Office Protocol 3</h1>
-        <p>É utlizado para receber e baixar e-mails de um servidor para um computador ou o dispositivo do usuário.</p>
-        <p>Ele não mantem os e-mails no servidor após o download, então, quando você baixa as mensagens, elas ficam armazenadas no seu computador, liberando espaço no servidor.</p>
-        <p>O POP3 não é ideal se você acessa e-mail de dipositivos diferentes, fazendo o IMAP melhor nesse quesito.</p>
-        <p>Um dos lados positivos, é que você pode acessar o e-mail de forma offiline, já que o e-mail foi armazenado de forma local.</p>
-
+        <h3>O que é POP3?</h3>
+        <p>O POP3 (Post Office Protocol version 3) é um protocolo de recebimento de e-mails que permite que o usuário baixe mensagens do servidor de e-mail para o seu computador ou dispositivo, geralmente para lê-las offline. Esse protocolo é utilizado por programas de e-mail, como Microsoft Outlook e Mozilla Thunderbird, e seu principal objetivo é transferir e-mails do servidor para o dispositivo do usuário, proporcionando acesso direto e armazenamento local das mensagens. </p>
+        <h3>Como funciona?</h3>
+        <p>O funcionamento do POP3 envolve a conexão entre o cliente de e-mail e o servidor de e-mail. Quando o usuário abre o cliente e solicita a verificação de novas mensagens, ele se conecta ao servidor POP3, que verifica as credenciais de login. Após a autenticação, o servidor baixa as mensagens para o dispositivo do usuário e, geralmente, as apaga do servidor, mantendo-as disponíveis apenas no dispositivo em que foram baixadas. Isso permite que os e-mails sejam acessados offline e libera espaço no servidor. </p>
     </div>
    
     <div id="smtp" class="protocol-details">
         <h1>SMTP - Simple Mail Transfer Protocol</h1>
-        <p>O SMTP é como o "carteiro" que pega a sua mensagem de e-mail e a entrega ao destinatário.</p>
-        <p>Se o destinatário usa um provedor diferente, o SMTP transfere o e-mail do servidor de origem para o servidor de destino, onde fica aguardando até ser baixado ou visualisado.</p>
-        <p>É usado exclusivamente para enviar e-mails, para receber e gerenciar são necessários outros protocolos, IMAP e POP3</p>
-        <p>Atualmente, SMTP trabalha com métodos de autenticação e, na maioria das vezes, com criptografia para proteger as mensagens durante o envio.</p>
-
+        <h3>O que é SMTP?</h3>
+        <p>SMTP (Simple Mail Transfer Protocol) é um protocolo de comunicação que permite a troca de emails entre servidores de maneira rápida e organizada. Ele é utilizado para o envio de emails, facilitando o transporte de mensagens eletrônicas de um servidor para outro até que cheguem ao destinatário. </p>
+        <h3>Como funciona?</h3>
+        <P>Quando uma pessoa envia um email, o cliente de email (como Outlook ou Gmail) se comunica com o servidor SMTP configurado para iniciar o processo de envio. O SMTP então verifica o endereço do remetente e do destinatário e tenta estabelecer uma conexão com o servidor SMTP do destinatário. Durante esse processo, o SMTP usa uma série de comandos para confirmar a entrega da mensagem e para verificar erros. Caso o servidor do destinatário esteja disponível, o email é transferido diretamente. Se não estiver, o SMTP retenta a entrega em intervalos regulares ou armazena a mensagem até que o servidor esteja acessível. Isso garante que os emails cheguem ao seu destino, mesmo que o processo leve algumas tentativas. </P>
     </div>
 
     <div id="ip (v4,v6)" class="protocol-details">
         <h1>IP(v4, v6)</h1>
-        <h2>IPv4 - Internet Protocol version 4</h2>
-        <p>É como um endereço de internet composto por 4 números, sendo separados por pontos (exemplo: 192.168.1.1).</p>
-        <p>Cada número pode variar de 0 a 255.</p>
-        <p>Endereços curtos e limitados, foi amplamente usado, mas está se esgotando.</p>
-        <h2>IPv6 - Internet Protocol version 6</h2>
-        <p>É uma versão mais atual desses endereços, sendo composto por 8 grupos de 4 caracteres, separados por dois pontos.</p>
-        <p>Possui endereços suficientes para o mundo atual, e com algumas melhorias de segurança e eficiência.</p>
-
+        <h2>IPv4/6</h2>
+        <h3>O que é e como funciona?</h3>
+        <p>O Protocolo de Internet (IP) é um conjunto de regras que governa como os dados são enviados e recebidos na rede. Todo dispositivo conectado à internet possui um endereço IP que o identifica de forma única, permitindo o roteamento das informações até ele. Existem duas versões de IP em uso: IPv4 e IPv6:</p>
+        <p>O IPv4: é mais antigo e é representado por quatro números;
+            IPv6:é atual e é representado por seis números;</p>
+        <h3>Exemplos de uso:</h3>
+        <p>Os endereços IP são usados diariamente para a navegação na internet, seja para acessar sites, realizar downloads ou assistir a vídeos. Em uma rede doméstica, por exemplo, o roteador utiliza IPs privados em IPv4 para organizar a comunicação entre dispositivos como computadores e smartphones.</p>
     </div>
  
     <div id="telnet" class="protocol-details">
         <h1>TELNET</h1>
-        <p>Protocolo de rede usado para acessar e gerenciar remotamente um computador ou um servidor, utilizando a internet ou rede local.</p>
-        <p>Ele permite que você entre em outro sistema e o controle como se realmente estivesse nele , utilizando comandos de texto.</p>
-        <p>TelNet não é criptografado, fazendo com que os dados transmitidos (incluindo senhas) possam ser interceptados, fazendo com que o SSH seja mais utilizado atualmente.</p>
-
+        <h3>O que é o TELNET?</h3>
+        <p>O Telnet é um protocolo de rede usado para fornecer acesso remoto a dispositivos ou sistemas através de uma conexão de terminal. Ele foi amplamente utilizado no passado para gerenciar servidores e dispositivos de rede, permitindo que um usuário controlasse um sistema de forma remota, como se estivesse usando o terminal diretamente no dispositivo.</p>
+        <h3>Como funciona?</h3>
+        <p>O funcionamento do Telnet envolve a criação de uma sessão de terminal virtual entre o dispositivo cliente e o servidor. O usuário se conecta ao servidor Telnet fornecendo o endereço IP ou o nome do host e, em seguida, autentica-se com um nome de usuário e senha. Uma vez autenticado, o usuário pode executar comandos e interagir com o sistema remoto como se estivesse localmente conectado. O Telnet usa uma conexão TCP na porta 23, mas, por ser um protocolo sem criptografia, todas as informações, incluindo senhas, são transmitidas de forma legível, o que o torna inseguro para uso em redes públicas ou para tarefas sensíveis.</p>
+        <h3>Exemplos de uso:</h3>
+        <p>Apesar de o Telnet ser considerado obsoleto e inseguro, ele ainda é usado em algumas situações específicas, como para testar conexões de rede e diagnosticar problemas com servidores, portas de rede e dispositivos de rede, devido à sua simplicidade e baixo overhead. Além disso, alguns equipamentos de rede, como roteadores e switches, ainda podem ser acessados via Telnet, embora a tendência seja substituir esse método por alternativas mais seguras, como o SSH.</p>
     </div>
     
     <div id="imap" class="protocol-details">
         <h1>IMAP - Internet Message Access Protocol</h1>
-        <p>É utilizado para acessar e gerenciar e-mails, mas diferente do POP3, ele baixa as mensagens para o seu dispositivo, permitindo que você gerencie diretamente do servidor.</p>
-        <p>Como os e-mails permanecem no servidor, qualquer alteração será refletida em todos os dispositivos que você acessa o e-mail.</p>
-        <p>Facilita a consulta e manutenção, pois permite que você organize seus e-mails em pastas diretamente no servidor.</p>
-        <p>Diferente do POP3, o IMAP só baixa o conteúdo do e-mail que você está utilizando, economizando espaço no dispositivo.</p>
- 
+        <h3>O que é o IMAP?</h3>
+        <p>O IMAP( Internet Message Access Protocol) é um protocolo de comunicação utilizado para acessar e gerenciar e-mails em servidores remotos. Ele permite que os usuários leiam, movam, excluam e organizem mensagens de e-mail diretamente no servidor, sem a necessidade de baixar os e-mails para o dispositivo local. O IMAP é amplamente utilizado em serviços de e-mail modernos, pois permite uma sincronização eficiente entre diversos dispositivos, mantendo os e-mails armazenados no servidor.</p>
+        <h3>Como funciona?</h3>
+        <p>Quando um cliente de e-mail se conecta ao servidor via IMAP, ele pode visualizar a caixa de entrada e outras pastas, como "Enviados" ou "Rascunhos", sem precisar baixar todas as mensagens. Ao abrir um e-mail, o conteúdo é baixado temporariamente, mas ele não é removido do servidor, permitindo que o usuário acesse a mesma mensagem em outro dispositivo ou cliente de e-mail sem problemas.</p>
+       <h3>Vantagem do IMAP</h3>
+        <p>Além disso, o IMAP oferece a capacidade de organizar as mensagens em pastas no servidor, facilitando a organização de e-mails de maneira centralizada. As ações realizadas, como marcar</p>
     </div>
     
     <div id="ssh" class="protocol-details">
         <h1>SSH - Secure Shell</h1>
-        <p>Protocolo que permite acessar remotamente os computadores, geralmente para fins de admnistração e manutenção de servidores.</p>
-        <p>Mas diferente do TelNet, ele pode fazer esse acesso de uma forma segura, pois criptografa todos os dados transmitidos, protegendo senhas e comandos de uma só vez.</p>
-        <p>Depois de estar conectado, você pode utilizar o terminal para fazer comandos no sistema remoto, como se estivesse fisicamente presente.</p>
-        <p>Também permite a transferência de arquivos de uma forma segura entre seu dispositivo e o sistema remoto, usando o SCP(Secure Copy Protocol) ou SFTP(SSH File Transfer Protocol).</p>
-
+        <h3>O que é?</h3>
+        <p>O SSH (Secure Shell) é um protocolo de rede usado para acessar de forma segura dispositivos remotos, como servidores, pela internet ou uma rede local. Ele permite que você faça login em uma máquina remota e execute comandos nela, de forma criptografada, o que garante a proteção contra interceptação ou ataques de "man-in-the-middle". O funcionamento do SSH baseia-se em um sistema de autenticação por chave criptográfica ou senha.</p>
+        <h3>como funciona?</h3>
+        <p>Quando você conecta a um servidor usando SSH, o cliente SSH e o servidor realizam um processo de troca de chaves para estabelecer uma conexão segura. O servidor envia sua chave pública para o cliente, e o cliente usa essa chave para criptografar uma mensagem que só pode ser decifrada com a chave privada do servidor. Isso garante que a comunicação entre os dois dispositivos seja confidencial e autêntica.</p>
+        <p>A autenticação geralmente é feita de duas formas: por senha ou por chave pública. No método de chave pública, o cliente tem uma chave privada no seu computador e uma chave pública armazenada no servidor. Quando o cliente tenta se conectar ao servidor, ele usa a chave privada para criar uma assinatura digital, que o servidor verifica usando a chave pública associada. Se a assinatura for válida, a conexão é estabelecida sem a necessidade de uma senha.</p>
+        <h3> Vantagens do SSH</h3>
+        <p>Uma das vantagens do SSH é que ele também permite o encaminhamento de portas (port forwarding), o que significa que você pode redirecionar tráfego de rede de forma segura entre o cliente e o servidor. Isso é útil, por exemplo, para acessar serviços internos de um servidor sem expô-los diretamente à internet.</p>
     </div>
 
 </body>
