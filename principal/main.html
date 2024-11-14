@@ -92,14 +92,13 @@
         </tbody>
     </table>
     <div id="http" class="protocol-details">
-        <h1>HTTP(S)</h1>
         <h1>HTTP(S) - Hypertext Transfer Protocol (Secure)</h2>
         <h3>O que é HTTP?</h3>
-        <p>O HTTP(HyperText Transfer Protocol) o principal protocolo usado para enviar dados entre um navegador web e um site, tendo também sua versão mais segura o HTTPS(HyperText Transfer Protocol Secure) ele utiliza a porta 443 diferenciado-se de sua outra versão que utiliza a porta 80.</p>
+        <p>O HTTP(HyperText Transfer Protocol) o principal protocolo usado para enviar dados entre um navegador web e um site, ele define como as mensagens vão ser formatadas e transmitidas (além de especificar como o servidor e o navegador devem responer a diferentes comandos.), tendo também sua versão mais segura o HTTPS(HyperText Transfer Protocol Secure) que utiliza a porta 443 diferenciado-se de sua outra versão que utiliza a porta 80.</p>
        
         <h3>Como funciona?</h3>
-        <p>Ele usa um protocolo de criptografia para guardar e proteger as comunicações(Transport
-            Layer Security(TLS)), ele usa uma infraestrutura de chave publica assimétrica, normalmente
+        <p>Ele usa um protocolo de criptografia para guardar e proteger as comunicações SSL (Secure Sockets Layer) e TLS (Transport
+            Layer Security), ele usa uma infraestrutura de chave publica assimétrica, normalmente
             esse sistema usa duas chaves diferentes para criptografar(chave pública: esta chave está
             disponível para todos que desejam interagir com o servidor de forma segura; chave privada:
             esta chave é controlada pelo proprietário de um site e é mantida, como o leitor pode imaginar,
@@ -120,6 +119,7 @@
             ainda amplamente usado para movimentar dados de um local para outro, especialmente em
             ambientes empresariais e de desenvolvimento de websites. Com o FTP, é possível enviar,
             baixar, renomear, excluir e organizar arquivos em um servidor remoto.</p>
+        <p>Embora sua popularidade tenha diminuido um pouco com a ascensão de outros protocolos mais seguros e modernos, como o SFTP(Secure FTP) e HTTP(S), ele ainda desempenha um papel essencial em diversos cenários, especialmente em servidores de hospedagem de sites e ambientes de desenvolvimento.</P>
         <h3>Como funciona?</h3>
         <p>O funcionamento do FTP se baseia em uma conexão entre dois pontos principais: um
             cliente (que normalmente é o dispositivo do usuário) e um servidor de arquivos. Para iniciar
@@ -130,6 +130,10 @@
         <p>As transferências em FTP podem ser feitas no modo texto (ASCII) para arquivos de texto ou no
             modo binário para arquivos executáveis, imagens e outros formatos. O cliente FTP envia uma solicitação
             de transferência, e o servidor responde, concluindo a ação.</p>
+        <h3>Ferramentas comuns para se usar no FTP:</h3>
+        <p>FileZilla: Um dos clientes FTP mais usados, com interface gráfica simples e suporte a FTPS(FTP Secure) e SFTP(SSH File Transfer Protocol).</p>
+        <p>WinSCP: Um cliente para Windows que suporta FTP, FTPS e SFTP, também bastante utilizado por desenvolvedores.</p>
+        <p>Cyberduck: Popular em ambientes Mac, é uma ferramenta gráfica de FTP que também oferece suporte a SFTP, Amazon S3 e outros serviços de armazenamento em nuvem.</p>
             <img src="imgs/ftp.webp">
             <q>Imagem tirada do site: <a href="https://blog.task.com.br/o-que-e-ftp/">https://blog.task.com.br/o-que-e-ftp/ </a></q>
             <span class="show-details" onclick="showDetails('ftp')">Fechar detalhes</span>
@@ -139,7 +143,7 @@
         <h1>DNS - Domain Name System</h1>
         <h3>O que é DNS?</h3>
         <p>DNS(Domain Name System ou Sistema de nome de domínio) ele traduz nomes de sites
-            em endereços de IP, ele é como uma “agenda de contato”.</p>
+            em endereços de IP númericos, como 190.0.2.1, que os computadores utilizam para se comunicar entre si na internet, ele é como uma “agenda de contato”.</p>
         <h3>Como funciona?</h3>
         <p>Quando um usuário digita um domínio na barra de endereços do navegador, ocorre uma
             consulta DNS:</p>
@@ -149,6 +153,13 @@
             geralmente configurado pelo provedor de internet;</p>
         <p>Servidores Autoritativos, Caso o servidor recursivo também não tenha o endereço, ele consulta servidores autoritativos, incluindo o servidor raiz, o TLD (Top-Level Domain, como .com, .org), e finalmente o servidor autoritativo do domínio específico.
                 Um exemplo de uso é quando abrimos um site web como o youtube ou twitch.</p>
+        <h3>Estrutura:</h3>
+        <p>.com é o domínio de topo (Top-Level Domain, TLD).</p>
+        <p>exemplo é o domínio de segundo nível.</p>
+        <p>www é um subdomínio, que pode ser configurado para apontar à um servidor específico.</p>
+        <h3>Exemplos:</h3>
+        <p>Acesso a sites: Quando você digita www.wikipedia.org no seu navegador, o DNS resolve esse nome para o IP do servidor que hospeda a Wikipédia, permitindo o carregamento da página.</p>
+        <p>Serviços de e-mail: Quando você envia um e-mail para alguém com o endereço exemplo@dominio.com, o servidor de e-mail consulta o registro MX do domínio "dominio.com" para descobrir qual servidor é responsável por receber e-mails para esse domínio.</p>
         <img src="imgs/dns.jpg">
         <q>Imagem tirada do site: <a href="https://www.maintutoriais.com.br/2022/08/o-que-e-dns-como-funciona-e-sua-importancia.html">https://www.maintutoriais.com.br/2022/08/o-que-e-dns-como-funciona-e-sua-importancia.html </a></q>
         <span class="show-details" onclick="showDetails('dns')">Fechar detalhes</span>
@@ -156,8 +167,15 @@
     
     <div id="tcp" class="protocol-details">
         <h1>TCP - Transmission Control Protocol</h1>
-        <p>Protocolo de comunicação orientado à conexão, garantindo a entrega dos pacotes de dados.</p>
-        <p>Operação: Divide os dados em pacotes, e garante que a transmissão seja realizada de forma ordenada e sem erros.</p>
+        <h3>O que é TCP?</h3>
+        <p>O TCP garante que os dados enviados de um computador para outro cheguem de forma confiável e ordenada, mesmo em uma rede onde pode haver perdas de pacotes ou atrasos. Ele é orientado à conexão, o que significa que uma conexão é estabelecida entre o remetente e o receptor antes de qualquer dado ser transmitido.</p>
+        <p>Ele divide os dados em pacotes, e garante que a transmissão seja realizada de forma ordenada e sem erros.</p>
+        <h3>Como funciona?</h3>
+        <p>Estabelecimento de Conexão: O processo de comunicação começa com um "Handshake" (aperto de mão), em que o cliente e servidor negociam parâmetros e verificam se ambos estão prontos para começar a troca de dados.</p>
+        <p>Transmissão de dados: Após a primeira etapa, os dados podem ser enviados, o TCP, como dito, vai dividir em pacotes, numerando eles para garantir que eles possam entregar os dados para o destinatário de forma correta.</p>
+        <p>Controle: A velocidade de transmissão dos dados será ajustada de acordo com a capacidade do receptor, evitando o sobrecarregamento do dispositivo de destino, esse controle é feito com o campo "janela deslizante", que indica os segmentos específicos, garantindo a confiabilidade da comunicação</p>
+        <p>Confirmação do Recebimento: O TCP garante que os dados cheguem ao destinatário, cada vez que o receptor recebe o dado, uma mensagem de confirmação é enviada para o emissor, se alguma parte não chegar, o receptor pode pedir essa mesma parte novamente.</p>
+        <p>Encerramento de Conexão: Depois dos dados serem enviados e recebidos, os dispositivos se "despedem" para encerrar a comunicação de forma organizada. Isso ocorre em quatro etapas: Ambos confirmam que terminaram de enviar e receber dados, fechando a conexão de maneira segura para liberar espaço na rede.</p>
         <img src="imgs/tcp.webp">
         <q>Imagem tirada do site: <a href="https://www.net-usb.com/pt/usb-over-ip/what-is-tcp-ip/">https://www.net-usb.com/pt/usb-over-ip/what-is-tcp-ip/ </a></q>
         <span class="show-details" onclick="showDetails('tcp')">Fechar detalhes</span>
@@ -165,11 +183,11 @@
    
     <div id="dhcp" class="protocol-details">
         <h1>DHCP - Dynamic Host Configuration Protocol</h1>
-        <p>O DHCP (Dynamic Host Configuration Protocol) é um protocolo de rede que automatiza a atribuição de endereços IP e outras configurações de rede para dispositivos em uma rede, Em vez de configurar manualmente cada dispositivo com um endereço IP.</p>
+        <p>O DHCP (Dynamic Host Configuration Protocol) é um protocolo de rede que automatiza a atribuição de endereços IP e outras configurações de rede para dispositivos em uma rede, sem precisar configurar manualmente cada dispositivo com um endereço IP, sendo bem prático no mundo atual.</p>
         <h3>Como funciona o DHCP?</h3>
         <p>O DHCP opera por meio de um processo de "oferta e concessão" entre o dispositivo que solicita o IP (chamado cliente DHCP) e o servidor DHCP. Quando um dispositivo se conecta a uma rede, ele envia uma mensagem de "descoberta DHCP" em busca de um servidor DHCP. Ao receber essa mensagem, o servidor DHCP responde com uma "oferta DHCP", contendo um endereço IP disponível e outras configurações de rede. Se o dispositivo aceita, ele responde com uma mensagem de "solicitação DHCP" e, finalmente, o servidor confirma a concessão do IP com uma "confirmação DHCP". </p>
         <h3>Exemplos de uso:</h3>
-        <p>Em redes domésticas, o roteador age como servidor DHCP, atribuindo automaticamente endereços IP para dispositivos como laptops, smartphones e impressoras. </p>
+        <p>Em redes domésticas, o roteador age como servidor DHCP, atribuindo automaticamente endereços IP para dispositivos como laptops, smartphones e impressoras, sendo a mesma coisa em outros lugares, por exemplo em restaurantes.</p>
         
         <img src="imgs/dhcp.png">
         <q>Imagem tirada do site: <a href="https://jotelulu.com/pt-pt/blog/o-que-e-dhcp-e-para-que-serve/">=https://jotelulu.com/pt-pt/blog/o-que-e-dhcp-e-para-que-serve/</a></q>
